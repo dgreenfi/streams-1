@@ -1,5 +1,7 @@
 <html>
   <body>
-    {{greetings}} There
+    {% for greeting in greetings %}
+        <td>{{greeting}}</td> There <br>
+    {% endfor %}
   </body>
 </html>
