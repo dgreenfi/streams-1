@@ -54,7 +54,7 @@ def output_severe_loc(new_events,proc_events,gkey):
     stdout.flush()
     return new_events
 
-def pingserver(key):
+def ping_server(key):
     #gets raw response from server for hardcoded lat, long range
     url='http://dev.virtualearth.net/REST/v1/Traffic/Incidents/35,-68,45,-78?'
     url+='&key='+key
@@ -62,7 +62,7 @@ def pingserver(key):
     return r.json()
 
 
-def cleanmod(strmod):
+def clean_mod(strmod):
     #clean up bing date string format of "lastModified":"\/Date(1309391096593)\/", to numerical for comparison
     ## not bring used for final version
     temp=strmod.split('(')[1]
