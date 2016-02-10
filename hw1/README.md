@@ -30,7 +30,7 @@ For this homework, I will only use events of type 4 severity.
 
 Events also have a number of times associated with them.  The times are clearly designed to be used in mapping system and are directed towards display on a map and not towards gathering information on the history of the event.  The times include a start time, last modified time (useful in detecting changes) and an end time for planning future channel.
 
-My site takes the event from this data and displays the description and location only along with an image of the location of the incident fetched from google maps.  It cycles through a stream of incident updates like below:
+My site takes the event from this data and displays the description and location only along with an image of the location of the incident fetched from google maps.  The image isn't live, so it doesn't show the incident, but give some visual of the scence.   It cycles through a stream of incident updates like below:
 
 ![Example](example_screen.png) "Example Screenshot")
 
