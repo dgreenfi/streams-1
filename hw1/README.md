@@ -26,7 +26,7 @@ These events include a broad base of events that could impact travel both on roa
 + Moderate
 + Serious
 
-For this homework, I will only use events of type 4 severity.
+For this homework, I will only use events of type 4 severity.  I also hardcoded a large bounding box latitude, longitude range around NYC so that I would get 100-200 outstanding events at a given point.  This range would ensure a steady flow of new events and make sure I have an initial stream.  The initial steam should run 10-15 minutes based on the 5 second polling/single event release mechanism.
 
 Events also have a number of times associated with them.  The times are clearly designed to be used in mapping system and are directed towards display on a map and not towards gathering information on the history of the event.  The times include a start time, last modified time (useful in detecting changes) and an end time for planning future channel.
 
