@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+     <script>
+      window.onload = function() {
+        var s = new WebSocket("ws://localhost:8080/");
+        //run on message from python webserver
+        s.onmessage = function(e) { document.write( e.data+ '<br>');
+            var inc = JSON.parse(e.data);
+        //insert into the body of the html dom the description, coordinates and a google api image of street view
+        document.body.innerHTML='<h1>'+inc.description+'</h1>'+ '<br>'+ inc.coordinates+ '<br>'+'<img src="https://maps.googleapis.com/maps/api/streetview?size=600x300&location='+String(inc.coordinates)+'&heading=151.78&pitch=-0.76&key='+inc.google_key+'"</img>';
+
+        }
+
+
+      };
+    </script>
+
+</head>
+
+<body>
+    <h1></h1>
+    <h1 id="desc">Waiting...</h1>
+
+
+</body>
+
+</html>
