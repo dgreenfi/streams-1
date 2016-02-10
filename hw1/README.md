@@ -51,8 +51,8 @@ incident
 
 ##Part II - starting the site
 Note: The site may hit rate limits:
-#microsoft bing maps key - 10,000/day rate limit
-#google streetview maps key - 1000/day image limit
+###microsoft bing maps key - 10,000/day rate limit
+###google streetview maps key - 1000/day image limit
 
 
 ###Step 0 - Place Credentials
@@ -70,9 +70,3 @@ The site server can be started by running
 ###Step 3 - Browse to localhost:8000
 Enjoy!
 
-    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/skeleton.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"
-    type="text/css">
