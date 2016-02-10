@@ -57,6 +57,9 @@ google streetview maps key - 1000/day image limit
 
 ###Step 0 - Place Credentials
 Make sure credentials file including Microsoft Key and Google key is in /cred
+Format should be JSON:
+{"bing_key":"{key}",
+"google_key":"{key}"}
 
 ###Step 1 - Start the polling server
 The polling server can be started by running the following within the server folder:
