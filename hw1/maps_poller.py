@@ -22,6 +22,7 @@ def main():
         time.sleep(5)
 
 def load_creds(credloc):
+    #load keys from key file
     with open(credloc) as data_file:
         data = json.load(data_file)
     return data
@@ -35,6 +36,7 @@ def new_events(res,proc_events):
             if incident['severity']==4:
                 #only output if id not in processed list
                 if incident['incidentId'] not in proc_events:
+                    #only process if not previously processed
                     new_events.append({'id':incident['incidentId'],'coordinates':incident['toPoint']['coordinates'],\
                         'description':incident['description'],'severity':incident['severity']})
     #return new events
@@ -45,13 +47,15 @@ def output_severe_loc(new_events,proc_events,gkey):
     disp_event=new_events.pop()
     proc_events.append(disp_event['id'])
     disp_event['google_key']=gkey
+    #send to stdout
     print json.dumps(disp_event)
     #print check for event processing logic
-    #print proc_events
+    # flush stdout to websocket
     stdout.flush()
     return new_events
 
 def pingserver(key):
+    #gets raw response from server for hardcoded lat, long range
     url='http://dev.virtualearth.net/REST/v1/Traffic/Incidents/35,-68,45,-78?'
     url+='&key='+key
     r= requests.get(url)
@@ -60,11 +64,11 @@ def pingserver(key):
 
 def cleanmod(strmod):
     #clean up bing date string format of "lastModified":"\/Date(1309391096593)\/", to numerical for comparison
+    ## not bring used for final version
     temp=strmod.split('(')[1]
     temp=int(temp[0:-2])
     return temp
 
-def auth():
-    pass
+
 if "__name__"!='main':
     main()
