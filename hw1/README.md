@@ -7,24 +7,24 @@ The stream I used was one that I created via polling of Microsoft Bing Traffic A
 
 The API provides a REST API that is part of a broader BING Maps suite. At a high level the API returns a list of objects that represent potential travel disruptions and metadata that both describes the event and it's attributes (such as type and severity), as well as metadata to help navigate alternatives (detour).  The API returns a number of data points about Traffic Incidents that may be relevant to travel.  The types of events included are:
 
-1.Accident
-2.Congestion
-3. DisabledVehicle
-4. MassTransit
-5. Miscellaneous
-6. OtherNews
-7. PlannedEvent
-8. RoadHazard
-9. Construction
-10. Alert
-11. Weather
++ Accident
++ Congestion
++ DisabledVehicle
++ MassTransit
++ Miscellaneous
++ OtherNews
++ PlannedEvent
++ RoadHazard
++ Construction
++ Alert
++ Weather
 
 These events include a broad base of events that could impact travel both on roads and mass transit.  The API also includes a severity of the event so that applications (and people) can filter through a large list of traffic events to filter to only the most potentially disruptive.  The severity is grouped into 4 categories.
 
-1: LowImpact
-2: Minor
-3: Moderate
-4: Serious
++ LowImpact
++ Minor
++ Moderate
++ Serious
 
 For this homework, I will only use events of type 4 severity.
 
@@ -51,8 +51,8 @@ incident
 
 ##Part II - starting the site
 Note: The site may hit rate limits:
-###microsoft bing maps key - 10,000/day rate limit
-###google streetview maps key - 1000/day image limit
+microsoft bing maps key - 10,000/day rate limit
+google streetview maps key - 1000/day image limit
 
 
 ###Step 0 - Place Credentials
