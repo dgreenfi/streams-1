@@ -30,6 +30,10 @@ For this homework, I will only use events of type 4 severity.
 
 Events also have a number of times associated with them.  The times are clearly designed to be used in mapping system and are directed towards display on a map and not towards gathering information on the history of the event.  The times include a start time, last modified time (useful in detecting changes) and an end time for planning future channel.
 
+My site takes the event from this data and displays the description and location only along with an image of the location of the incident fetched from google maps.  It cycles through a stream of incident updates like below:
+
+![Example](example_screen.jpg) "Example Screenshot")
+
 ###maps_poller.py - Stream Creation file
 In order to create a stream, I make a GET request over the mapArea 35,-68,45,-78.  This is a large bounding box around the NY area. 
 I expanded it fairly large to increase the amount of data streaming.  Additionally, in order to both conserve Google
