@@ -13,7 +13,7 @@ def main():
 
     while True:
         #get new results
-        res=pingserver(creds['bing_key'])
+        res=ping_server(creds['bing_key'])
         #reconciles new events by ID
         events+=new_events(res,proc_events)
         #sends to server
